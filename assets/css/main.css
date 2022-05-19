@@ -1,0 +1,171 @@
+
+
+:root{
+    --app-width: 480px;
+    --white-color: #fff;
+    --text-color: #000;
+    
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: #eae7e7;
+}
+
+
+/* Phần playMusic */
+
+.app {
+    width: var(--app-width);
+    margin: 0 auto;
+    min-height: 480px;
+    
+}
+
+.play-music{
+    position: fixed;
+    background-color: var(--white-color);
+    top: 0;
+    width: var(--app-width);
+    left: auto;
+    right: auto;
+    padding: 24px 0;
+
+}
+
+.play-music__header{
+    text-align: center;
+
+}
+
+.play-music__header-title{
+    font-size: 2rem;
+    color: #ec0a7f;
+
+
+}
+
+.play-music__header-name{
+    font-size: 2.4rem;
+    color: var(--text-color);
+    
+
+}
+
+.play-music__img{
+    height: 240px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 240px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-position: center;
+
+}
+
+.play-music__control{
+
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    margin-top: 40px;
+
+}
+
+.play-music__control-icon{
+    font-size: 2rem;
+}
+
+.play-music__control-playing i{
+    font-size: 5.2rem;
+}
+
+.playing i.play-music__control-icon--pause{
+    display: none;
+}
+
+.pause i.play-music__control-icon--playing{
+    display: none;
+}
+
+.play-music__control-item{
+
+}
+
+.play-music__time{
+    width: 88%;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+.music-list{
+    margin-top: 480px;
+    /* margin-left: 0; */
+    padding: 16px 16px 0 16px;
+    list-style: none;
+    background-color: #f4f3f3;
+    
+}
+
+.music-item{
+    display: flex;
+    height: 70px;
+    padding: 6px;
+    background-color: #fff;
+    margin: 12px 0;
+
+}
+
+
+
+.music-item__img{
+
+    width: 14%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size : cover;
+    height: 100%;
+    border-radius: 50%;
+
+}
+
+.music-item__text{
+    flex: 1;
+    padding-left: 22px;
+
+}
+
+.music-item__name{
+    font-size: 1.9rem;
+    margin: 8px 0;
+
+}
+
+.music-item__single{
+    font-size: 1.2rem;
+
+}
+
+.music-item__more{
+    font-size: 2.4rem;
+    display: flex;
+    align-items: center;
+}
+
+
+
