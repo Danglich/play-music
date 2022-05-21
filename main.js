@@ -23,121 +23,121 @@ const animateCd = cdImg.animate([{transform: 'rotate(360deg)'}], {
 
 animateCd.pause()
 
-const app = (function (){
+function createApp (){
+    const songs = [
+        
+        { 
+            id: 12,
+            name: "Stay",
+            single: "The Kid LAROI ft. Justin Bieber",
+            image: "./assets/img/song12.jpg",
+            music : "./assets/musics/song12.mp3"
+        },
+        { 
+            id: 11,
+            name: "Dusk Till Dawn",
+            single: "ZAYN ft. Sia",
+            image: "./assets/img/song11.jpg",
+            music : "./assets/musics/song11.mp3"
+        },
+        { 
+            id: 13,
+            name: "Mood",
+            single: "Mood ft. Iann dior - Ro Ryon",
+            image: "./assets/img/song13.jpg",
+            music : "./assets/musics/song13.mp3"
+        },
+        { 
+            id: 1,
+            name: "Một phút",
+            single: "Andiez",
+            image: "./assets/img/song1.jpg",
+            music : "./assets/musics/song1.mp3"
+        },
+
+        { 
+            id: 2,
+            name: "Phi hành gia",
+            single: "Slow , Lil' Wuyn",
+            image: "./assets/img/song2.jpg",
+            music : "./assets/musics/song2.mp3"
+        },
+
+        { 
+            id: 3,
+            name: "Phút ban đầu",
+            single: "Hoài Lâm",
+            image: "./assets/img/song3.jpg",
+            music : "./assets/musics/song3.mp3"
+        },
+
+        { 
+            id: 4,
+            name: "Mãi mãi là của nhau",
+            single: "Bùi Anh Tuấn",
+            image: "./assets/img/song4.jpg",
+            music : "./assets/musics/song4.mp3"
+        },
+
+        { 
+            id: 5,
+            name: "Em là bà nội của anh",
+            single: "Trọng Hiếu",
+            image: "./assets/img/song5.jpg",
+            music : "./assets/musics/song5.mp3"
+        },
+
+        { 
+            id: 6,
+            name: "Độ tộc 2",
+            single: "Độ Mixi , Phúc Du",
+            image: "./assets/img/song6.jpg",
+            music : "./assets/musics/song6.mp3"
+        },
+
+        { 
+            id: 7,
+            name: "Có hẹn với thanh xuân",
+            single: "MONSTAR",
+            image: "./assets/img/song7.jpg",
+            music : "./assets/musics/song7.mp3"
+        },
+
+        { 
+            id: 8,
+            name: "Chạy về nới phía anh",
+            single: "Khắc Việt",
+            image: "./assets/img/song8.jpg",
+            music : "./assets/musics/song8.mp3"
+        },
+
+        { 
+            id: 9,
+            name: "Chạy về khóc với anh",
+            single: "ERIK",
+            image: "./assets/img/song9.jpg",
+            music : "./assets/musics/song9.mp3"
+        },
+
+        { 
+            id: 10,
+            name: "Anh luôn là lí do",
+            single: "ERIK",
+            image: "./assets/img/song10.jpg",
+            music : "./assets/musics/song10.mp3"
+        },
+
+        
+    ]
     const app = {
         isRandom : false,
         isPlaying : false,
         isLoop : false,
         currentIndex: 0,
-        songs : [
-            
-            { 
-                id: 12,
-                name: "Stay",
-                single: "The Kid LAROI ft. Justin Bieber",
-                image: "./assets/img/song12.jpg",
-                music : "./assets/musics/song12.mp3"
-            },
-            { 
-                id: 11,
-                name: "Dusk Till Dawn",
-                single: "ZAYN ft. Sia",
-                image: "./assets/img/song11.jpg",
-                music : "./assets/musics/song11.mp3"
-            },
-            { 
-                id: 13,
-                name: "Mood",
-                single: "Mood ft. Iann dior - Ro Ryon",
-                image: "./assets/img/song13.jpg",
-                music : "./assets/musics/song13.mp3"
-            },
-            { 
-                id: 1,
-                name: "Một phút",
-                single: "Andiez",
-                image: "./assets/img/song1.jpg",
-                music : "./assets/musics/song1.mp3"
-            },
-    
-            { 
-                id: 2,
-                name: "Phi hành gia",
-                single: "Slow , Lil' Wuyn",
-                image: "./assets/img/song2.jpg",
-                music : "./assets/musics/song2.mp3"
-            },
-    
-            { 
-                id: 3,
-                name: "Phút ban đầu",
-                single: "Hoài Lâm",
-                image: "./assets/img/song3.jpg",
-                music : "./assets/musics/song3.mp3"
-            },
-    
-            { 
-                id: 4,
-                name: "Mãi mãi là của nhau",
-                single: "Bùi Anh Tuấn",
-                image: "./assets/img/song4.jpg",
-                music : "./assets/musics/song4.mp3"
-            },
-    
-            { 
-                id: 5,
-                name: "Em là bà nội của anh",
-                single: "Trọng Hiếu",
-                image: "./assets/img/song5.jpg",
-                music : "./assets/musics/song5.mp3"
-            },
-    
-            { 
-                id: 6,
-                name: "Độ tộc 2",
-                single: "Độ Mixi , Phúc Du",
-                image: "./assets/img/song6.jpg",
-                music : "./assets/musics/song6.mp3"
-            },
-    
-            { 
-                id: 7,
-                name: "Có hẹn với thanh xuân",
-                single: "MONSTAR",
-                image: "./assets/img/song7.jpg",
-                music : "./assets/musics/song7.mp3"
-            },
-    
-            { 
-                id: 8,
-                name: "Chạy về nới phía anh",
-                single: "Khắc Việt",
-                image: "./assets/img/song8.jpg",
-                music : "./assets/musics/song8.mp3"
-            },
-    
-            { 
-                id: 9,
-                name: "Chạy về khóc với anh",
-                single: "ERIK",
-                image: "./assets/img/song9.jpg",
-                music : "./assets/musics/song9.mp3"
-            },
-    
-            { 
-                id: 10,
-                name: "Anh luôn là lí do",
-                single: "ERIK",
-                image: "./assets/img/song10.jpg",
-                music : "./assets/musics/song10.mp3"
-            },
-    
-            
-        ],
     
         render : function() {
             var htmls = [];
-            htmls = this.songs.map(function(song, index) {
+            htmls = songs.map(function(song, index) {
                 return `
                 <li class="music-item" data-index = "${index}">
                     <div  style=" background-image: url('${song.image}')" class="music-item__img">
@@ -160,7 +160,7 @@ const app = (function (){
     
         
         loadSongCurrent: function() {
-            const song = this.songs[this.currentIndex]
+            const song = songs[this.currentIndex]
             const nameNode = $('.play-music__header-name')
             const imageNode = $('.play-music__img')
             const songItems = $$('.music-item')
@@ -245,7 +245,7 @@ const app = (function (){
                 if(_this.isRandom && !_this.isLoop) {
     
                     do {
-                        var randomIndex = Math.floor(Math.random() * _this.songs.length)
+                        var randomIndex = Math.floor(Math.random() * songs.length)
     
                     }
                     while(randomIndex === _this.currentIndex);
@@ -277,7 +277,7 @@ const app = (function (){
             nextBtn.onclick = function() {
                 if(_this.isRandom) {
                     do {
-                        var randomIndex = Math.floor(Math.random() * _this.songs.length)
+                        var randomIndex = Math.floor(Math.random() * songs.length)
     
                     }
                     while(randomIndex === _this.currentIndex);
@@ -286,7 +286,7 @@ const app = (function (){
                 }
                 else {
                     _this.currentIndex++
-                    if(_this.currentIndex >= _this.songs.length) {
+                    if(_this.currentIndex >= songs.length) {
                         _this.currentIndex = 0
                     }
     
@@ -299,7 +299,7 @@ const app = (function (){
             prevBtn.onclick = function() {
                 _this.currentIndex--;
                 if(_this.currentIndex < 0) {
-                    _this.currentIndex = _this.songs.length - 1;
+                    _this.currentIndex = songs.length - 1;
                 }
                 _this.loadSongCurrent()
                 audio.play()
@@ -357,7 +357,7 @@ const app = (function (){
 
     return app
 
-})()
+}
 
 
 app.start()
