@@ -359,6 +359,6 @@ function createApp (){
 
 }
 
-
+const app = createApp()
 
 app.start()
