@@ -172,6 +172,7 @@ const app = {
         })
         songItem.classList.add('active')
         songItem.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"})
+        window.screenY(0)
         nameNode.textContent = song.name
         imageNode.style.backgroundImage = `url('${song.image}')`
         audio.src = song.music
