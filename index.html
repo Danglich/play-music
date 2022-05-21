@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Set img head -->
+    <link rel="icon" href="https://static.fullstack.edu.vn/static/media/f8-icon.7ad2b161d5e80c87e516.png" type="image/x-icon" />
+
     <!-- Reset lại Css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.1/fontawesome-free-6.1.1-web/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/main.css">
-    <title>Play Music</title>
+    <title>ZingMp3-Mini</title>
 </head>
 <body>
     <div class="app">
@@ -25,30 +28,30 @@
 
             <div class="play-music__control">
                 
-                <li class="play-music__control-item">
+                <li class="play-music__control-item loop">
                     <i class="play-music__control-icon fa-solid fa-rotate-right"></i>
 
                 </li>
 
-                <li class="play-music__control-item">
+                <li class="play-music__control-item prev">
                     <i class="play-music__control-icon fa-solid fa-backward-fast"></i>
 
                 </li>
 
-                <li onclick="app.controlPlaying()" class="play-music__control-item play-music__control-playing pause">
-                    <i class="play-music__control-icon play-music__control-icon--pause fa-solid fa-play"></i>
-                    <i class="play-music__control-icon play-music__control-icon--playing fa-solid fa-circle-pause"></i>
+                <li class="play-music__control-playing pause">
+                    <i class="play-music__control-icon--pause fa-solid fa-play"></i>
+                    <i class="play-music__control-icon--playing fa-solid fa-circle-pause"></i>
                     
 
                 </li>
 
                 
-                <li class="play-music__control-item">
+                <li class="play-music__control-item next">
                     <i class="play-music__control-icon fa-solid fa-forward-fast"></i>
 
                 </li>
 
-                <li class="play-music__control-item">
+                <li class="play-music__control-item random">
                     <i class="play-music__control-icon fa-solid fa-shuffle"></i>
                 </li>
 
