@@ -18,7 +18,7 @@ const randomBtn = $('.play-music__control-item.random')
 
 const animateCd = cdImg.animate([{transform: 'rotate(360deg)'}], {
     duration: 10000,
-    iteration: Infinity
+    iterations: Infinity
 })
 
 animateCd.pause()
